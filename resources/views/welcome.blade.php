@@ -10,49 +10,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     </head>
-    <header class="flex justify-between  border-border pr-5  bg-gray-400 h-16 items-center">
+    <x-header class="z-50 "/>
+    <body class="h-screen flex flex-col bg-gray-50">
+        <main class="flex-grow space-y-10 mx-10 pt-20">
 
-        <div class="flex justify-between gap-10">
-            <div>
-                <img src="{{ asset('images/')}}" alt="LOGO">
-            </div>
-            <ul class="flex justify-center gap-5 ml-4">
-                <a href="" class="border-blue-200 hover:border-b-4 transition ease-out"><li> Generate-NIN</li></a>
-                <a href="" class="border-blue-200 hover:border-b-4 transition ease-out"><li>About</li></a>
-                <a href="" class="border-blue-200 hover:border-b-4 transition ease-out"><li>Contact</li></a>
-                       </ul>
-        </div>
-        <div class="flex justify-around mr-10 gap-5">
-            <a href="" class="px-2 py-2 text-sm rounded-md border-border bg-red-500 text-white hover:bg-gray-800 transition-colors">Get Started</a>
-            <a href="" class="px-2 py-2 text-sm rounded-md bg-white text-red-500 hover:bg-gray-800 transition-colors"> Contact Us</a>
-    </header>
+            <section>
+           <x-hero/>
+            </section>
 
-    <body class="bg-background h-full">
-       
-    </body>
-    <footer class="flex flex-col px-10">
-        <div >
-            <p class="bold  font-bold text-4xl text-center mb-16">Mustard <strong class="text-sm -ml-2">HQ</strong></p>
-        </div>
-        <div class="flex justify-center mb-10 ">
-            <ul class="flex gap-10">
-            <a href=""><li>About Us</li></a>
-            <a href=""><li>Contact Us</li></a>
-            <a href=""><li>FAQs </li></a>
-            <a href=""><li>Privacy Policy</li></a>
-            <a href=""><li>Terms and Conditions</li></a>
-        </ul>
-        </div>
-        <div class="border-b-2 border-gray-800 "></div>
-        <div class="flex justify-between">
-            <p class=" mt-4">@copyright </p>
-            <div class="flex gap-4 mb-10  mt-4">
-                <p>Privacy Policy</p>
-                <p>Terms and Condition </p>
-                <p>Cookies Policy</p>
-            </div>
+            <section class="lg:mb-0 md:mb-0 sm:mt-10">
+                <x-company-profile/>
+            </section>
+            <section class="">
+                <x-featured-one/>
+            </section>
+            <section class="">
+                <x-contact-us-plain/>
+            </section>
             
-        </div>
+        </main>
     
-    </footer>
+        <x-footer/>
+    </body>
+
 </html>
+
